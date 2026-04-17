@@ -120,7 +120,7 @@ def render_header(subtitle: str):
 # HELPER — GENERADOR PDF GAP ASSESSMENT
 # =============================================================================
 def generate_gap_pdf(empresa: str, responsable: str, checklist_items: dict, scores: dict) -> bytes:
-    """Genera un informe PDF de gap assessment con branding Baseline."""
+    """Genera un informe PDF de gap assessment."""
     try:
         from reportlab.lib import colors
         from reportlab.lib.pagesizes import A4
@@ -315,7 +315,7 @@ def generate_gap_pdf(empresa: str, responsable: str, checklist_items: dict, scor
     story.append(HRFlowable(width="100%", thickness=1, color=C_ORANGE))
     story.append(Spacer(1, 0.3*cm))
     story.append(Paragraph(
-        "Este informe fue generado automáticamente por la herramienta interactiva de Baseline Solutions. "
+        "Este informe fue generado automáticamente por la herramienta interactiva en desarrollo. "
         "Los contenidos son de referencia general y no reemplazan la asesoría especializada.",
         s_caption,
     ))
@@ -686,97 +686,97 @@ CORRELACION = [
         "Sección Plan de Cierre (SERNAGEOMIN)": "1. Resumen Ejecutivo",
         "Elemento ICMM": "Closure Vision, Principles and Objectives (3)",
         "Principio GISTM": "—",
-        "Recomendación Baseline": "Incluir Closure Vision Statement explícito aunque el formato SERNAGEOMIN no lo exija.",
+        "Recomendación": "Incluir Closure Vision Statement explícito aunque el formato SERNAGEOMIN no lo exija.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "4. Descripción de la faena y entorno",
         "Elemento ICMM": "Knowledge Base (2)",
         "Principio GISTM": "Principio 2 — Knowledge Base",
-        "Recomendación Baseline": "Estructurar como base de conocimiento iterativa con línea base social + ambiental + técnica y plan de actualización quinquenal.",
+        "Recomendación": "Estructurar como base de conocimiento iterativa con línea base social + ambiental + técnica y plan de actualización quinquenal.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "5. Resumen RCAs y compromisos ambientales",
         "Elemento ICMM": "Engagement for Closure Plan Development (5)",
         "Principio GISTM": "Principio 1 — Rights of PAP",
-        "Recomendación Baseline": "Cruzar compromisos RCA con matriz de stakeholders ICMM y grievance mechanism GISTM.",
+        "Recomendación": "Cruzar compromisos RCA con matriz de stakeholders ICMM y grievance mechanism GISTM.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "6. Informe Vida Útil (Ley 20.235)",
         "Elemento ICMM": "Integration into LoM Planning (1) + Closure Costs (11)",
         "Principio GISTM": "—",
-        "Recomendación Baseline": "Incluir escenarios de cierre temporal/repentino ICMM elemento 15 en el informe.",
+        "Recomendación": "Incluir escenarios de cierre temporal/repentino ICMM elemento 15 en el informe.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "7. Metodología Evaluación de Riesgos (ISO 31000)",
         "Elemento ICMM": "Identifying Risks and Opportunities (6)",
         "Principio GISTM": "Principios 3, 4, 7",
-        "Recomendación Baseline": "Usar Guía Metodológica Riesgos SERNAGEOMIN 2014 como base + matriz ICMM risk/opportunity + Consequence Classification GISTM Anexo 2.",
+        "Recomendación": "Usar Guía Metodológica Riesgos SERNAGEOMIN 2014 como base + matriz ICMM risk/opportunity + Consequence Classification GISTM Anexo 2.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "8. Descripción de instalaciones",
         "Elemento ICMM": "Knowledge Base (2) — Domain model",
         "Principio GISTM": "Principio 2",
-        "Recomendación Baseline": "Aplicar Tool 1 ICMM (Domain model) para estructurar instalaciones como closure domains.",
+        "Recomendación": "Aplicar Tool 1 ICMM (Domain model) para estructurar instalaciones como closure domains.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "9. Evaluación de Riesgos por instalación",
         "Elemento ICMM": "Identifying Risks and Opportunities (6)",
         "Principio GISTM": "Principios 4, 5, 7",
-        "Recomendación Baseline": "Para depósitos de relaves, aplicar clasificación de consecuencias GISTM Anexo 2 además de la matriz SERNAGEOMIN.",
+        "Recomendación": "Para depósitos de relaves, aplicar clasificación de consecuencias GISTM Anexo 2 además de la matriz SERNAGEOMIN.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "10. Medidas y actividades de cierre",
         "Elemento ICMM": "Closure Activities (7) + Post-closure Land Use (4)",
         "Principio GISTM": "Principio 5",
-        "Recomendación Baseline": "Vincular medidas a success criteria cuantitativos (ICMM 8) y a uso post-cierre definido.",
+        "Recomendación ": "Vincular medidas a success criteria cuantitativos (ICMM 8) y a uso post-cierre definido.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "11. Programación de cierre",
         "Elemento ICMM": "Progressive Closure (9) + Closure Execution Plan (12)",
         "Principio GISTM": "Principio 6",
-        "Recomendación Baseline": "Maximizar cierre progresivo para liberar garantías anticipadamente (Art. 28 Ley 20.551 + Principio GISTM 6).",
+        "Recomendación": "Maximizar cierre progresivo para liberar garantías anticipadamente (Art. 28 Ley 20.551 + Principio GISTM 6).",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "12. Monitoreo y post-cierre",
         "Elemento ICMM": "Monitoring, Maintenance and Management (13)",
         "Principio GISTM": "Principio 7",
-        "Recomendación Baseline": "Programa de monitoreo con triggers, thresholds y surveillance plan estilo GISTM.",
+        "Recomendación": "Programa de monitoreo con triggers, thresholds y surveillance plan estilo GISTM.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "13. Estabilidad física",
         "Elemento ICMM": "Closure Activities (7)",
         "Principio GISTM": "Principios 4, 5, 7",
-        "Recomendación Baseline": "Incluir análisis de consecuencias para relaves bajo GISTM Anexo 2 (extreme post-closure loading).",
+        "Recomendación": "Incluir análisis de consecuencias para relaves bajo GISTM Anexo 2 (extreme post-closure loading).",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "14. Estabilidad química",
         "Elemento ICMM": "Closure Activities (7) + Knowledge Base (2)",
         "Principio GISTM": "Principio 6",
-        "Recomendación Baseline": "Usar Guía Estabilidad Química SERNAGEOMIN 2015 + caracterización MEND / GARD Guide.",
+        "Recomendación": "Usar Guía Estabilidad Química SERNAGEOMIN 2015 + caracterización MEND / GARD Guide.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "15. Garantías financieras",
         "Elemento ICMM": "Closure Costs (11)",
         "Principio GISTM": "—",
-        "Recomendación Baseline": "Construir estimación AACE class 3 o mejor; considerar liberaciones vía cierre progresivo y crédito art. 50 DGA.",
+        "Recomendación": "Construir estimación AACE class 3 o mejor; considerar liberaciones vía cierre progresivo y crédito art. 50 DGA.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "16. Información estratégica",
         "Elemento ICMM": "Post-closure Land Use (4)",
         "Principio GISTM": "Principio 15",
-        "Recomendación Baseline": "Divulgación pública alineada a Ley 20.285 + requisitos GISTM 15.",
+        "Recomendación": "Divulgación pública alineada a Ley 20.285 + requisitos GISTM 15.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "17. Programa de difusión",
         "Elemento ICMM": "Stakeholder Engagement (17) + Social Transition (10)",
         "Principio GISTM": "Principios 1, 12, 15",
-        "Recomendación Baseline": "Incluir grievance mechanism UNGP-compliant y plan de transición social estilo ICMM cap. 11.",
+        "Recomendación": "Incluir grievance mechanism UNGP-compliant y plan de transición social estilo ICMM cap. 11.",
     },
     {
         "Sección Plan de Cierre (SERNAGEOMIN)": "(Transversal) Gobernanza del cierre",
         "Elemento ICMM": "Closure Governance (16)",
         "Principio GISTM": "Principios 8, 9, 10, 11",
-        "Recomendación Baseline": "Proponer Accountable Executive + RTFE + ITRB como buenas prácticas voluntarias (gap vs. normativa chilena).",
+        "Recomendación": "Proponer Accountable Executive + RTFE + ITRB como buenas prácticas voluntarias (gap vs. normativa chilena).",
     },
 ]
 
@@ -908,7 +908,7 @@ with st.sidebar:
         "Guía interactiva del estado del arte en cierre de minas. "
         "Integra SERNAGEOMIN Ley 20.551, ICMM 2019 e ICMM-GISTM 2020."
     )
-    st.caption("Baseline Solutions · v1.0")
+    st.caption("Patricio Santos · v1.0")
 
 
 # =============================================================================
@@ -949,7 +949,7 @@ if page == "inicio":
               color:{BRAND_ORANGE}; font-weight:700; font-size:0.78rem;
               letter-spacing:4px; text-transform:uppercase;
               margin:0 0 16px 0;
-          ">Estado del Arte · Baseline Solutions</p>
+          ">Marco regulatorio, estandares y mejores prácticas · Patricio Santos</p>
 
           <h1 style="
               color:white; font-size:2.6rem; font-weight:800;
@@ -1103,7 +1103,7 @@ if page == "inicio":
         "7 fases desde el diagnóstico inicial hasta el relinquishment, con actividades clave y entregables formales por cada etapa del ciclo de vida.",
         accent="#4A5A6A"), unsafe_allow_html=True)
     r2[2].markdown(feature_card(SVG_CHECKLIST, "Checklist + Gap Assessment PDF",
-        "Autoevalúa tu plan contra los tres marcos, obtén tu score de cumplimiento y descarga un informe PDF con branding Baseline listo para el cliente.",
+        "Autoevalúa tu plan contra los tres marcos, obtén tu score de cumplimiento y descarga un informe PDF.",
         accent="#4A9E6A"), unsafe_allow_html=True)
 
     st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
@@ -1122,7 +1122,7 @@ if page == "inicio":
             box-shadow:0 2px 8px rgba(31,46,61,0.15);
         ">
           <p style="color:{BRAND_ORANGE};font-weight:700;font-size:0.72rem;letter-spacing:2px;
-                    text-transform:uppercase;margin:0 0 12px 0;">Baseline Solutions</p>
+                    text-transform:uppercase;margin:0 0 12px 0;">Patricio Santos</p>
           <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:12px;">
             <div style="text-align:center;">
               <div style="color:white;font-size:1.6rem;font-weight:800;line-height:1;">3</div>
@@ -1653,7 +1653,7 @@ elif page == "checklist":
         try:
             pdf_bytes = generate_gap_pdf(empresa_pdf, responsable_pdf, checklist_items, scores)
             if pdf_bytes:
-                nombre_archivo = f"gap_assessment_baseline_{date.today().strftime('%Y%m%d')}.pdf"
+                nombre_archivo = f"gap_assessment_(solo como referencia y prueba)_{date.today().strftime('%Y%m%d')}.pdf"
                 st.download_button(
                     label="⬇ Descargar Gap Assessment PDF",
                     data=pdf_bytes,
