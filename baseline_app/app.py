@@ -161,7 +161,7 @@ def generate_gap_pdf(empresa: str, responsable: str, checklist_items: dict, scor
 
     # ── Portada ─────────────────────────────────────────────────────────────
     cover_data = [[Paragraph(
-        f'<font color="white"><b>BASELINE SOLUTIONS</b></font><br/>'
+        f'<font color="white"><b>REFERENCE EXAMPLE</b></font><br/>'
         f'<font color="#C14A1F" size="14"><b>Gap Assessment — Cierre de Minas</b></font>',
         ParagraphStyle("cov", fontSize=20, leading=30, alignment=TA_CENTER, fontName="Helvetica-Bold")
     )]]
@@ -189,7 +189,7 @@ def generate_gap_pdf(empresa: str, responsable: str, checklist_items: dict, scor
         ["Empresa / Faena:", empresa or "—"],
         ["Responsable:",      responsable or "—"],
         ["Fecha de emisión:", date.today().strftime("%d/%m/%Y")],
-        ["Herramienta:",      "Baseline Solutions — Guía Cierre de Minas v1.0"],
+        ["Herramienta:",      "Patricio Santos — Guía Cierre de Minas v1.0"],
     ]
     meta_tbl = Table(meta_data, colWidths=[5*cm, 12*cm])
     meta_tbl.setStyle(TableStyle([
