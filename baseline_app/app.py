@@ -128,7 +128,7 @@ def generate_gap_pdf(empresa: str, responsable: str, checklist_items: dict, scor
         from reportlab.lib.units import cm
         from reportlab.lib.enums import TA_CENTER, TA_LEFT
         from reportlab.platypus import (
-            HRFlowable, Image, Paragraph, SimpleDocTemplate,
+            HRFlowable, Paragraph, SimpleDocTemplate,
             Spacer, Table, TableStyle,
         )
     except ImportError:
@@ -176,14 +176,6 @@ def generate_gap_pdf(empresa: str, responsable: str, checklist_items: dict, scor
     ]))
     story.append(cover_tbl)
     story.append(Spacer(1, 0.6*cm))
-
-    # Logo (if available)
-    logo_path = Path(__file__).parent / "logo.jpeg"
-    if logo_path.exists():
-        img = Image(str(logo_path), width=5*cm, height=2.2*cm, kind="proportional")
-        img.hAlign = "CENTER"
-        story.append(img)
-        story.append(Spacer(1, 0.3*cm))
 
     meta_data = [
         ["Empresa / Faena:", empresa or "—"],
